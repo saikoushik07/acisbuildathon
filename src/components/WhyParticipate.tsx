@@ -30,25 +30,25 @@ const reasons = [
 
 export default function WhyParticipate() {
   return (
-    <section className="py-20 px-4 bg-black">
+    <section className="py-16 md:py-20 px-4 bg-black">
       <div className="container mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">
             Why <span className="text-gradient">Participate?</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-6xl mx-auto">
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-gray-900 to-gray-800 p-8 rounded-2xl border border-gray-700 card-hover"
+              className="bg-gradient-to-br from-gray-900 to-gray-800 p-5 md:p-8 rounded-2xl border border-gray-700 card-hover"
             >
-              <div className="bg-cyan-500/10 border border-cyan-500/30 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
-                <reason.icon size={28} className="text-cyan-400" />
+              <div className="bg-cyan-500/10 border border-cyan-500/30 w-12 md:w-16 h-12 md:h-16 rounded-xl flex items-center justify-center mb-4 md:mb-6">
+                <reason.icon size={24} className="text-cyan-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 text-white">{reason.title}</h3>
-              <p className="text-gray-400 leading-relaxed">{reason.description}</p>
+              <h3 className="text-base md:text-xl font-semibold mb-2 md:mb-3 text-white">{reason.title}</h3>
+              <p className="text-xs md:text-sm text-gray-400 leading-relaxed">{reason.description}</p>
             </div>
           ))}
         </div>
